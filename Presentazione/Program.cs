@@ -24,6 +24,46 @@ namespace presentazione
             verde = 2
         }
 
+        //class CodaBloccante {
+        //    CodaBloccante(int d) {
+        //        if (d <= 0) d = 1;
+        //        dim = d;
+        //        lockCoda = new object();
+        //        pazienti = new Paziente[dim];
+        //        ins = 0;
+        //        esc = 0;
+        //        scrivibili = 0;
+        //    }
+        //    Paziente[] pazienti;
+        //    object lockCoda;
+        //    int dim;
+        //    int ins;
+        //    int esc;
+        //    int scrivibili;
+
+        //    void inserisci(Paziente p) {
+        //        lock(lockCoda) {
+        //            while ( scrivibili == 0)
+        //                Monitor.Wait(lockCoda);
+        //            ins = (ins + 1) % dim;
+        //            pazienti[ins] = p;
+        //            scrivibili--;
+        //            ??? come sveglio i consumatori?
+        //        }
+        //    }
+
+        //    Paziente estrai() {
+        //        lock (lockCoda){
+        //            while (scrivibili == dim)
+        //                Monitor.Wait(lockCoda);
+        //            esc = (esc + 1) % dim;
+        //            scrivibili++;
+        //            ??? come sveglio i produttori?
+        //            return pazienti[esc];
+        //        }
+        //    }
+        //}
+
         class Paziente {
             private static int idcorrente = 0;
             public int Id { get; set; }
